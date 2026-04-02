@@ -28,32 +28,30 @@ cd exr-checker
 uv sync
 ```
 
-This creates `.venv/` and installs the console scripts:
-- `exr-checker`
-- `check-exr`
+This creates `.venv/` and installs the console script:
+- `exr-check`
 
 ## Usage
 
 The tool expects a full sequence prefix including the trailing dot:
 
 ```bash
-uv run exr-checker /mnt/vfx/plate/FRM_4520_plate_WTA_v000.
+uv run exr-check /mnt/vfx/plate/FRM_4520_plate_WTA_v000.
 ```
 
 Examples:
 
 ```bash
-uv run exr-checker /mnt/vfx/plate/FRM_4520_plate_WTA_v000.
-uv run exr-checker /mnt/vfx/plate/FRM_4520_plate_WTA_v000. --threads 16 --verbose
-uv run exr-checker /mnt/vfx/plate/FRM_4520_plate_WTA_v000. --ext exr --threads 8
-uv run check-exr /mnt/vfx/plate/FRM_4520_plate_WTA_v000.
+uv run exr-check /mnt/vfx/plate/FRM_4520_plate_WTA_v000.
+uv run exr-check /mnt/vfx/plate/FRM_4520_plate_WTA_v000. --threads 16 --verbose
+uv run exr-check /mnt/vfx/plate/FRM_4520_plate_WTA_v000. --ext exr --threads 8
 ```
 
 If you activate the virtual environment, you can run the command directly:
 
 ```bash
 source .venv/bin/activate
-exr-checker /mnt/vfx/plate/FRM_4520_plate_WTA_v000.
+exr-check /mnt/vfx/plate/FRM_4520_plate_WTA_v000.
 ```
 
 ## Run from anywhere
@@ -61,8 +59,7 @@ exr-checker /mnt/vfx/plate/FRM_4520_plate_WTA_v000.
 If you want to call the tool without activating the virtual environment, add a shell alias that points `uv` at this project:
 
 ```bash
-alias exr-checker='uv run --project /home/ale/03_CODE/python/EXR_checker exr-checker'
-alias check-exr='uv run --project /home/ale/03_CODE/python/EXR_checker check-exr'
+alias exr-check='uv run --project /home/ale/03_CODE/python/EXR_checker exr-check'
 ```
 
 For `zsh`, add those lines to `~/.zshrc`, then reload your shell:
@@ -74,7 +71,7 @@ source ~/.zshrc
 ## CLI options
 
 ```text
-usage: exr-checker [-h] [--ext EXT] [--threads THREADS] [--verbose] sequence
+usage: exr-check [-h] [--ext EXT] [--threads THREADS] [--verbose] sequence
 ```
 
 - `sequence`: full path including basename and trailing dot

@@ -199,9 +199,9 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  exr-checker /mnt/vfx/plate/FRM_4520_plate_WTA_v000.
-  exr-checker /mnt/vfx/plate/FRM_4520_plate_WTA_v000. --threads 16 --verbose
-  exr-checker /mnt/vfx/plate/FRM_4520_plate_WTA_v000. --ext exr --threads 8
+  exr-check /mnt/vfx/plate/FRM_4520_plate_WTA_v000.
+  exr-check /mnt/vfx/plate/FRM_4520_plate_WTA_v000. --threads 16 --verbose
+  exr-check /mnt/vfx/plate/FRM_4520_plate_WTA_v000. --ext exr --threads 8
         """
     )
     parser.add_argument(

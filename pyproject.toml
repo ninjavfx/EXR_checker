@@ -9,8 +9,7 @@ dependencies = [
 ]
 
 [project.scripts]
-exr-checker = "exr_checker.cli:main"
-check-exr = "exr_checker.cli:main"
+exr-check = "exr_checker.cli:main"
 
 [build-system]
 requires = ["hatchling"]

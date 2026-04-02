@@ -1,0 +1,20 @@
+[project]
+name = "exr-checker"
+version = "0.1.0"
+description = "EXR sequence corruption checker for VFX pipelines"
+requires-python = ">=3.11"
+dependencies = [
+    "openexr>=3.3.0",
+    "numpy>=1.24.0",
+]
+
+[project.scripts]
+exr-checker = "exr_checker.cli:main"
+check-exr = "exr_checker.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/exr_checker"]

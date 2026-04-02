@@ -56,6 +56,21 @@ source .venv/bin/activate
 exr-checker /mnt/vfx/plate/FRM_4520_plate_WTA_v000.
 ```
 
+## Run from anywhere
+
+If you want to call the tool without activating the virtual environment, add a shell alias that points `uv` at this project:
+
+```bash
+alias exr-checker='uv run --project /home/ale/03_CODE/python/EXR_checker exr-checker'
+alias check-exr='uv run --project /home/ale/03_CODE/python/EXR_checker check-exr'
+```
+
+For `zsh`, add those lines to `~/.zshrc`, then reload your shell:
+
+```bash
+source ~/.zshrc
+```
+
 ## CLI options
 
 ```text
